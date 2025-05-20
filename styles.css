@@ -1,5 +1,333 @@
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+.Titulos{
+    text-align: center; /*Lo centramos*/
+    font-size: 30px; /*Añadimos un tamaño a la letra*/
+    padding: 20px 0px; /*Padding arriba y abajo de 20px*/
+    font-style: italic; /*Agregamos un estilo a la letra*/
+    font-family: sans-serif; /*Cambiamos el tipo de letra*/
+}
+/* ejercico 1 */
+.primer-punto {
+    width: 400px; /*Establecemos un Ancho*/
+    height: 400px; /*Establecemos un Alto*/
+    border: 1px solid black; /*Le asignamos un borde para poder ver el contenedor*/
+    margin: 0 auto; /*Centramos el contenedor*/
+}
+/* body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f0f0f0; 
+    background-color:#f0f0f0;
+    transition: background-color 0.5s ease;
+} */
+@media(max-width: 600px){
+    .primer-punto{
+        background-color: #a2d5f2;
+    }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+    body{
+        background-color: #f9d56e;
+    }
+}
+
+@media (min-width: 1025px){
+    body{
+        background-color:#7ec850;
+    }
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.box{
+    background-color: #4a90e2;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.25rem;
+    margin:0 auto;
+    margin-top: 50px;
+    width: 300px;
+    box-sizing: border-box;
+}
+/* ejercicio 3 */
+.contenedor-enlaces{
+    background-color: rgb(255, 0, 0); /*Color de fondo*/
+    width: 100px; /*Ancho*/
+    height: 50px; /*Alto*/
+    margin: 0 auto; /*Centramos el contenedor*/
+    border-radius: 10px; /*Añadimos un borde a las esquinas*/
+}
+/*Ahora modificamos los enlaces*/
+.titulo-enlace{
+    color: white; /*Color letra*/
+    margin-left: 10px; /*Separamos del borde izquierdo*/
+    text-decoration: none; /*Eliminamos la linea debajo del enlace*/
+    font-size: 16px ; /*Tamaño de la letra*/
+    line-height: 50px; /*Separamos del borde superior del contenedor*/
+}
+
+/* EJERCICIO 5 */
+.menu{
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+.menu-desktop{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.menu-desktop li {
+        display: block;
+        margin:  5px 0;
+    }
+.menu-desktop li a {
+        padding:  10px 15px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+.menu-desktop li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #1f1e1e;
+}
+@media (min-width: 769px) and (max-width: 1024px){
+    .menu-desktop{
+        text-align: center;
+    }
+
+
+.menu-desktop li {
+    display: inline-block; /*Mantener horizontal en tablets */
+    margin:  0 10px; /*Reducimos un poco el margen para más espacio */
+}
+.menu-desktop li a {
+    padding:  8px 12px;
+    font-size: 1.5em;
+    font-style: italic;
+}
+}
+
+@media (max-width: 768px){
+    .menu-desktop{
+        text-align: left;
+    }
+
+    .menu-desktop li {
+        display: block;
+        margin:  5px 0;
+    }
+    .menu-desktop li a {
+        padding:  10px 15px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+/* ejercico 6 */
+.tamaño_text{
+    text-align: center;
+}
+/*Ahora lo ajustamos a la medida de una computadora*/
+@media (min-width: 1200px) {
+    .tamaño-texto {
+        font-size: 2.8em; /*Su tamaño de letra será 2.8em*/
+        font-family: Arial; /*Y su tipo de letra sera arial*/
+    }
+}
+
+/* Ahora ajustamos el tamaño de fuente para tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .tamaño-texto {
+        font-size: 2.4em; /*Reducimos el tamaño de la fuente*/
+        font-family: 'Times New Roman', Times, serif; /*Cambiamos el tipo de la fuenta a times*/
+        font-style: italic; /*Y su estilo sera italica*/
+    }
+}
+
+/* Por ultimo lo ajustamos para móviles */
+@media (max-width: 768px) {
+    .tamaño-texto {
+        font-size: 2em; /*Reducimos el tamaño de la letra a 2em*/
+        font-family: sans-serif; /*El tipo de la letra sera sans */
+        font-weight: bold; /*Y será negrilla*/
+    }
+}
+
+/* ejercicio 8 */
+/* Estilos para dispositivos móviles (hasta 768px de ancho) */
+
+.contenedor-img{
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+    padding: 1em;
+}
+
+.contenedor-img img{
+    display: inline-block;
+    width: calc(33.33% - 1em);
+    vertical-align: top;
+    margin: 0.5em 0; /*Usamos un margen de 0.5*/
+    max-width: 300px; /*Un ancho maximo de 300px*/
+    height: auto; /*La altura en auto*/
+    box-sizing: border-box; /*Usamos border box*/
+    border-radius: 10px; /*Redondeamos las imagenes*/
+}
+
+/*Ahora usamos un ancho maximo de 1024 para que en tablet se vean 2 columnas*/
+@media (max-width: 1024px) {
+    .contenedor-imagenes img {
+        width: calc(50% - 1em); /*Dos imágenes por fila */
+    }
+}
+
+/*Ahora usamos un ancho maximo de 768 para que en movil se vea 1 columna*/
+@media (max-width: 768px) {
+    .contenedor-imagenes {
+        white-space: normal; /*Nos ayuda apilar verticalmente */
+    }
+
+    .contenedor-imagenes img {
+        width: 100%; /*Una sola imagen por fila */
+        margin: 0.5em auto; /*las centramos */
+    }
+}
+
+/* EJERCICIO 10 */
+/* Contenedor principal del formulario */
+.contenedor-formulario {
+    max-width: 100%; /* Se adapta a cualquier tamaño de pantalla */
+    margin: auto; /* Centrado en medio de la pantalla */
+    padding: 20px; /* Espacio alrededor del formulario */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+/* Bloque donde van los campos del formulario */
+.Tipos-formulario {
+    display: block; /* En móviles, los campos aparecen uno debajo del otro */
+}
+
+/* Etiquetas como "Nombre", "Correo", etc. */
+.Tipos-formulario > label {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 5px; /* Un poco de espacio abajo de cada etiqueta */
+    display: block; /* Ocupan toda la línea */
+}
+
+/* Campos de texto: nombre, correo y teléfono */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 10px; /* Espacio adentro del campo */
+    font-size: 1em; /* Tamaño normal de texto */
+    border-radius: 5px; /* Bordes un poco redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    width: 100%; /* Ancho completo en móviles */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+
+/* Botón de enviar */
+button {
+    padding: 12px; /* Relleno dentro del botón */
+    font-size: 1em; /* Tamaño normal de texto */
+    background-color: #007BFF; /* Color azul bonito */
+    color: white; /* Letra blanca */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar encima */
+    width: 100%; /* Ocupa todo el ancho en móviles */
+}
+
+/* Diseño para tablets (entre 600px y 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+    /* Mostramos los campos lado a lado */
+    .Tipos-formulario > label,
+    .Tipos-formulario > input {
+        display: inline-block; /* Uno al lado del otro */
+        width: 48%; /* Cada uno ocupa casi la mitad de la pantalla */
+        vertical-align: top; /* Alineados desde arriba */
+        margin-right: 2%; /* Pequeño espacio entre ellos */
+        margin-bottom: 10px; /* Espacio abajo */
+    }
+
+    /* El último campo antes del botón no lleva margen derecho */
+    #telefono {
+        margin-right: 0;
+    }
+
+    /* El botón sigue ocupando todo el ancho */
+    button {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Diseño para pantallas grandes (escritorio, desde 900px) */
+@media (min-width: 900px) {
+    /* Ahora mostramos tres campos por fila */
+    .Tipos-formulario > label,
+    .Tipos-formulario > input {
+        width: 31.33%; /* Cada campo ocupa un tercio del espacio */
+        display: inline-block; /* Uno al lado del otro */
+        vertical-align: top; /* Alineados desde arriba */
+        margin-right: 2%; /* Pequeño espacio entre ellos */
+        margin-bottom: 10px; /* Espacio abajo */
+    }
+
+    /* El último campo antes del botón no lleva margen derecho */
+    #telefono {
+        margin-right: 0;
+    }
+
+    /* El botón sigue ocupando todo el ancho */
+    button {
+        display: block;
+        width: 100%;
+    }
+}
+/* ejercicio 11 */
+.caja-titulo{
+    background-color: #a2d5f2;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.caja-titulo h1{
+    font-size: 2rem;
+}
+/*Ahora ajustamos la medida del texto para un dispositivo movil (40rem = 640px)*/
+@media (max-width: 40rem){
+    .caja-titulo h1{
+        font-size: 1.5rem; /*Cambiamos el tipo de letra*/
+        color: rgb(17, 0, 255); /*Color de la letra*/
+    }
+}
+/*Ahora lo ajustamos para una tablet  (40rem = 640px y 62.4rem = 1000px*/
+@media (min-width: 40rem) and (max-width: 62.5rem) {
+    .caja-titulo h1{
+        font-size: 1.75rem; /*Ahora engrandamos un poco el tamaño de la letra*/
+        color: rgb(255, 0, 13); /*Cambiamos el color*/
+    }
+}
+/*y por ultimo, lo ajustamos al tamaño de un escritorio (62.5rem = 1000px)*/
+@media (min-width: 62.5){
+    .caja-titulo h1{
+        font-size: 2.25rem; /*Aumentamos el tamaño de la letra*/
+    }
 }
