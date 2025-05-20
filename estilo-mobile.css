@@ -1,68 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: sans-serif;
-    margin: 0 auto;
-    padding: 18px;
-    background-color: yellowgreen;
-    color: white;
-}
-header{
-    text-align: center;
-    margin-bottom: 20px;
-}
-.boton-princ{
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 15px;
+/* Reset básico para eliminar márgenes, rellenos y establecer el box-sizing */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total de los elementos */
 }
 
-/* Ahora para aplicar el estilo mobile first, a medida que aumenta el tamaño ira cambiando el diseño con ayuda del
-media queries, este tamaño es el de una tablet 768px */
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: sans-serif; /* Establece la fuente del texto a sans-serif */
+    margin: 0 auto; /* Centra el cuerpo horizontalmente */
+    padding: 18px; /* Agrega un relleno de 18px alrededor del cuerpo */
+    background-color: yellowgreen; /* Establece un color de fondo verde amarillento */
+    color: white; /* Establece el color del texto a blanco */
+}
+
+/* Estilos para el encabezado */
+header {
+    text-align: center; /* Centra el texto dentro del encabezado */
+    margin-bottom: 20px; /* Agrega un margen inferior de 20px al encabezado */
+}
+
+/* Estilos para el botón principal */
+.boton-princ {
+    display: block; /* Muestra el botón como un bloque */
+    width: 100%; /* Establece el ancho del botón al 100% del contenedor */
+    padding: 15px; /* Agrega relleno dentro del botón */
+    background-color: blue; /* Establece un color de fondo azul para el botón */
+    color: white; /* Establece el color del texto del botón a blanco */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Agrega bordes redondeados al botón */
+    font-size: 18px; /* Establece el tamaño de fuente del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Elimina el subrayado del texto del botón */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin-bottom: 15px; /* Agrega un margen inferior de 15px al botón */
+}
+
+/* Media query para pantallas de tabletas (mínimo 768px) */
 @media (min-width: 768px) {
     h1 {
-        font-size: 28px; /*Aumentamos el tamaño de la letra*/
+        font-size: 28px; /* Aumenta el tamaño de la fuente del encabezado h1 */
     }
-    /*Modificamos el diseño del boton*/
+
+    /* Modificamos el diseño del botón principal */
     .boton-principal { 
-        display: inline-block; /*Lo ajustamos como una linea de bloque*/
-        width: auto; /*Dejamos su ancho en automatico*/
-        padding: 10px 20px; /*Padding arriba y abajo de 10 y izquierda derecha 20*/
-        margin: 0 auto; /* Centrar el botón en pantallas más grandes */
-        background-color: rgb(218, 0, 199); /*Cambiamos el color de fondo del boton*/
-        color: white; /*Color de letra*/
+        display: inline-block; /* Cambia el botón a un bloque en línea */
+        width: auto; /* Establece el ancho del botón a automático */
+        padding: 10px 20px; /* Agrega relleno de 10px arriba y abajo, 20px a los lados */
+        margin: 0 auto; /* Centra el botón en pantallas más grandes */
+        background-color: rgb(218, 0, 199); /* Cambia el color de fondo del botón a un rosa */
+        color: white; /* Establece el color del texto del botón a blanco */
     }
 
     main {
-        text-align: center; /* Centramos el botón */
+        text-align: center; /* Centra el contenido dentro de main */
     }
 }
 
-/* Ahora ajustamos el tamaño al de un computador que seria lo mas amplio  */
+/* Media query para pantallas de computadoras (mínimo 992px) */
 @media (min-width: 992px) {
     body {
-        /*Añadimos un padding*/
-        padding: 50px;
+        padding: 50px; /* Aumenta el relleno del cuerpo a 50px */
     }
-    /*Tambien modificamos un poco el estilo del boton para mostrar que si hay una diferencia*/
-    .boton-principal{
-        background-color: rgb(57, 57, 192); /*Color de fondo*/
-        color: white; /*Color letra*/
+
+    /* Modificamos el estilo del botón principal para pantallas grandes */
+    .boton-principal {
+        background-color: rgb(57, 57, 192); /* Cambia el color de fondo del botón a azul oscuro */
+        color: white; /* Establece el color del texto del botón a blanco */
     }
 
     header {
-        margin-bottom: 40px; /*Ahora subimos un poco el boton*/
+        margin-bottom: 40px; /* Aumenta el margen inferior del encabezado a 40px */
     }
 }

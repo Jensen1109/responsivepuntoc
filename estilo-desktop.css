@@ -1,54 +1,67 @@
-*{
-    border: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* Reset básico para eliminar bordes, márgenes y establecer el box-sizing */
+* {
+    border: 0; /* Elimina el borde predeterminado de todos los elementos */
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total de los elementos */
 }
-body{
-    font-family: sans-serif;
-    margin: 0;
-    background-color: aquamarine;
-    padding: 20px;
-    text-align: center;
+
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: sans-serif; /* Establece la fuente del texto a sans-serif */
+    margin: 0; /* Elimina el margen del cuerpo */
+    background-color: aquamarine; /* Establece un color de fondo verde claro */
+    padding: 20px; /* Agrega un relleno de 20px alrededor del cuerpo */
+    text-align: center; /* Centra el texto dentro del cuerpo */
 }
-.contenedor{
-    width: 600px;
-    margin: 50px auto;
-    background-color: antiquewhite;
-    border-radius: 9px;
-    box-shadow: 0 5px 7px wheat;
+
+/* Estilos para el contenedor principal */
+.contenedor {
+    width: 600px; /* Establece un ancho fijo de 600px para el contenedor */
+    margin: 50px auto; /* Agrega un margen superior de 50px y centra el contenedor horizontalmente */
+    background-color: antiquewhite; /* Establece un color de fondo beige claro para el contenedor */
+    border-radius: 9px; /* Agrega bordes redondeados al contenedor */
+    box-shadow: 0 5px 7px wheat; /* Agrega una sombra suave al contenedor */
 }
-h1{
-    font-size: 2.3em;
-    margin-bottom: 20px;
+
+/* Estilos para el encabezado h1 */
+h1 {
+    font-size: 2.3em; /* Establece un tamaño de fuente grande para el encabezado */
+    margin-bottom: 20px; /* Agrega un margen inferior de 20px al encabezado */
 }
-.boton-princi{
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: darkorange;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1em;
+
+/* Estilos para el botón principal */
+.boton-princi {
+    display: inline-block; /* Muestra el botón como un bloque en línea */
+    padding: 15px 30px; /* Agrega relleno de 15px arriba y abajo, 30px a los lados */
+    background-color: darkorange; /* Establece un color de fondo naranja oscuro para el botón */
+    color: white; /* Establece el color del texto del botón a blanco */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 8px; /* Agrega bordes redondeados al botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Elimina el subrayado del texto del botón */
+    font-size: 1em; /* Establece un tamaño de fuente normal para el botón */
 }
-@media (max-width: 768){
-    .contenedor{
-        width: 90%;
-        margin: 30px auto;
-        padding: 20px;
+
+/* Media query para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%; /* Establece el ancho del contenedor al 90% del ancho de la pantalla */
+        margin: 30px auto; /* Agrega un margen superior de 30px y centra el contenedor horizontalmente */
+        padding: 20px; /* Agrega un relleno de 20px dentro del contenedor */
+    }
+
+    /* Estilos para el encabezado h1 en pantallas pequeñas */
+    h1 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente del encabezado a 1.5em */
+        margin-bottom: 15px; /* Agrega un margen inferior de 15px al encabezado */
     }
 }
 
-h1{
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-@media (max-width: 500px){
-    .contenedor{
-        width: 95%;
-        margin: 20px auto;
-        padding: 15px;
+/* Media query para pantallas muy pequeñas (hasta 500px) */
+@media (max-width: 500px) {
+    .contenedor {
+        width: 95%; /* Establece el ancho del contenedor al 95% del ancho de la pantalla */
+        margin: 20px auto; /* Agrega un margen superior de 20px y centra el contenedor horizontalmente */
+        padding: 15px; /* Agrega un relleno de 15px dentro del contenedor */
     }
 }

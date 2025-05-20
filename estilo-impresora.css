@@ -1,64 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-header,footer{
-    background-color: #a7699e;
-    padding: 10px;
-    text-align: center;
+/* Reset básico para eliminar márgenes, rellenos y establecer el box-sizing */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total de los elementos */
 }
 
-main{
-    margin-top: 20px;
+/* Estilos para el encabezado y pie de página */
+header, footer {
+    background-color: #a7699e; /* Establece un color de fondo púrpura para el encabezado y pie de página */
+    padding: 10px; /* Agrega un relleno de 10px alrededor del encabezado y pie de página */
+    text-align: center; /* Centra el texto dentro del encabezado y pie de página */
 }
 
-section{
-    margin-bottom: 20px;
-}
-a{
- color: blue;
- text-decoration: underline;
+/* Estilos para el contenedor principal */
+main {
+    margin-top: 20px; /* Agrega un margen superior de 20px al contenedor principal */
 }
 
+/* Estilos para las secciones dentro del contenedor principal */
+section {
+    margin-bottom: 20px; /* Agrega un margen inferior de 20px a cada sección */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: blue; /* Establece el color del texto de los enlaces a azul */
+    text-decoration: underline; /* Aplica un subrayado a los enlaces */
+}
+
+/* Estilos para el elemento aside */
 aside {
-    background-color: #eaeaea;
-    padding: 10px;
-    border-left: 4px solid #888;
-    margin-top: 20px;
+    background-color: #eaeaea; /* Establece un color de fondo gris claro para el aside */
+    padding: 10px; /* Agrega un relleno de 10px dentro del aside */
+    border-left: 4px solid #888; /* Agrega un borde izquierdo de 4px de color gris oscuro */
+    margin-top: 20px; /* Agrega un margen superior de 20px al aside */
 }
 
-/* Ahora con ayuda de @media print, pondremos los estilos a la hora de imprimir */
+/* Media query para estilos de impresión */
 @media print {
     /* Ocultar elementos no necesarios al imprimir */
     aside,
     header,
     footer {
-        display: none;
+        display: none; /* Oculta el aside, encabezado y pie de página al imprimir */
     }
 
-    /* Ajustamos el cuerpo principal de la impresión*/
+    /* Ajustamos el cuerpo principal de la impresión */
     body {
-        font-size: 12pt;
-        color: black;
-        background: white;
-        margin: 0.5cm;
+        font-size: 12pt; /* Establece el tamaño de fuente a 12pt para la impresión */
+        color: black; /* Establece el color del texto a negro para la impresión */
+        background: white; /* Establece el fondo a blanco para la impresión */
+        margin: 0.5cm; /* Agrega un margen de 0.5cm alrededor del cuerpo al imprimir */
     }
 
-    /*Ahora mostramos la url con los enlaces*/
+    /* Ahora mostramos la URL con los enlaces */
     a::after {
-        content: " (" attr(href) ")";
-        font-size: 10pt;
-        color: black;
-    }
-    /* Modificamos los enlaces y le asignamos un color  */
-    a {
-        color: black;
-        text-decoration: none;
+        content: " (" attr(href) ")"; /* Muestra la URL del enlace después del texto del enlace */
+        font-size: 10pt; /* Establece el tamaño de fuente de la URL a 10pt */
+        color: black; /* Establece el color de la URL a negro */
     }
 
-    /*Y usando page break, eliminamos los posibles saltos de lineas que se generen*/
+    /* Modificamos los enlaces y le asignamos un color */
+    a {
+        color: black; /* Establece el color del texto de los enlaces a negro para la impresión */
+        text-decoration: none; /* Elimina el subrayado de los enlaces para la impresión */
+    }
+
+    /* Usando page break, evitamos saltos de línea dentro de secciones */
     section, h2, p {
-        page-break-inside: avoid;
+        page-break-inside: avoid; /* Evita que se produzcan saltos de página dentro de secciones, encabezados y párrafos */
     }
 }
