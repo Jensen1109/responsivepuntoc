@@ -1,8 +1,7 @@
 
-
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
     box-sizing: border-box;
 
 }
@@ -205,6 +204,7 @@
     }
 }
 
+
 /* EJERCICIO 10 */
 /* Contenedor principal del formulario */
 .contenedor-formulario {
@@ -329,5 +329,45 @@ button {
 @media (min-width: 62.5){
     .caja-titulo h1{
         font-size: 2.25rem; /*Aumentamos el tamaño de la letra*/
+    }
+}
+
+/* ejercicio 12 */
+
+aplicacion {
+    min-height: 100vh;
+    display: block;
+    text-align: center;
+    margin: 2rem;
+    box-sizing: border-box;
+}
+
+.imagen-dispositivos{
+    background-image: url(img/majin\ vegeta2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width:100%;
+    height: 70vh;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+/* ahora ajustamos a que el minimo de la pantalla sea 992px 
+luego de que el ancho supere esta medida, se cambiara la imagen*/
+@media (min-width: 992px) {
+    .imagen-dispositivos {
+        background-image: url(img/vegeta\ ultra\ blue.jpg); /* Cambiamos a imagen móvil */
+        height: 100vh; /* Un poco más pequeña */
+        max-height: 300px; /* Altura máxima menor */
+        width: 200px;
+    }
+}
+/*Y por ultimo para terminar de adaptarlo, cuando la medida supere 1300, se cambiara la imagen*/
+@media (min-width: 1300px) {
+    .imagen-dispositivos {
+        background-image: url(img/ultra\ ego\ veegeta.jpg); /* Cambiamos a imagen móvil */
+        max-height: 300px; /* Altura máxima menor */
+        width: 200px;
     }
 }

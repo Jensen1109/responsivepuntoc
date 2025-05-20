@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header,footer{
+    background-color: #a7699e;
+    padding: 10px;
+    text-align: center;
+}
+
+main{
+    margin-top: 20px;
+}
+
+section{
+    margin-bottom: 20px;
+}
+a{
+ color: blue;
+ text-decoration: underline;
+}
+
+aside {
+    background-color: #eaeaea;
+    padding: 10px;
+    border-left: 4px solid #888;
+    margin-top: 20px;
+}
+
+/* Ahora con ayuda de @media print, pondremos los estilos a la hora de imprimir */
+@media print {
+    /* Ocultar elementos no necesarios al imprimir */
+    aside,
+    header,
+    footer {
+        display: none;
+    }
+
+    /* Ajustamos el cuerpo principal de la impresión*/
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+        margin: 0.5cm;
+    }
+
+    /*Ahora mostramos la url con los enlaces*/
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: black;
+    }
+    /* Modificamos los enlaces y le asignamos un color  */
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /*Y usando page break, eliminamos los posibles saltos de lineas que se generen*/
+    section, h2, p {
+        page-break-inside: avoid;
+    }
+}

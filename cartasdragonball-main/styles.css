@@ -1,0 +1,201 @@
+* {
+    margin: 0; /*Elimina margenes por defecto del navegador*/
+    padding: 0; /*le damos un espacio de 0*/
+}
+
+body {
+    margin: 0;  /*Elimina margenes por defecto del navegador*/
+    background-position: center; /* Centra la imagen del fondo*/
+    background-size: cover;/* Ajusta la imagen para cubrir toda la pantalla*/
+    background-attachment: fixed; /* Hace que el fondo quede fijo al hacer scroll*/
+    font-family: "Bungee Spice", sans-serif;/* Fuente personalizada desde google fonts*/
+    background-image: url("/img/fondo.jpg");/* Aplica la imagen fondo.jpg como fondo del elemento*/
+
+}
+
+main {
+    background-color: rgba(49, 39, 39, 0.8); /* fondo blanco con transparencia (rgba)*/
+    width: 99.2vw; /* Punto 16: Usa unidades vw para definir el ancho. */
+    height: 670vh; /* Punto 16: Usa unidades vh para definir la altura. */
+    margin: auto;
+}
+
+/* titulo*/
+.titulo{
+    padding-top: 20px; /* Agrega un espacio interno de 20 pixeles en laparte superior del contenido del elemento*/
+    text-align: center; /* centra el texto horizontalmente*/
+}
+
+/*galeria contenedora */
+.galeria {
+    
+    padding: 2em; /* Espacio interiror usando em*/
+    max-width: 1200px; /*Ancho relativo al viewport 95% del ancho del navegador */
+    min-height: 100vh; /* minimo alto igual al alto total del navegador*/
+    font-size: 1rem; /* tamaño base de fuente para  heredad con rem */
+    margin: auto; /*  margen alrededor de la galeria usando rem */
+    gap: 1em; /* Establece un espacio separacion de 1em entre filas y columnas en elementos de tipo grido o flex*/
+    
+}
+
+/* tarjetas de personajes */ 
+.personajes {
+    border: 3px solid #a8a8a8;  /* Aplica un borde de 3 pixeles con color gris */ 
+    border-radius: 10px; /* Redondea las esquinas del borde con un radio de 10 pixeles*/ 
+    padding: 15px; /* Agrega un espacio internode 15 pixeles entre el borde y el contenido del elemento*/ 
+    width: 230px; /* Define un ancho fijo de 230 pixeles para el elemento*/
+    text-align: center; /* centra horizontalmente el contenido de texto dentro del elemento*/
+    background-color: #f9f9f9; /*Establece un color de fondo gris muy claro*/
+    display: inline-block; /* permite que el elemento se comporte como bloque pero en linea con otros elementos*/
+    margin-bottom: 20px; /* Agrega un espacio externo de 20 pixxeles debajo del elemento*/
+    margin-left: 20px; /* Agrega un espacio externo de 20 pixeles a la izquierda del elemento*/
+    margin-top: 20px; /*Agrega un espacio externo de 20 pixeles arriba del elemento */
+    
+}
+/* imagenes de las tarjetas*/
+.personajes img {
+    object-fit:contain; /*Hace que el contenido como una imagen o video se ajuste completamente del contenedor manteniendo su proporcion original. no se recortanada pero puede quedar espacio vacio  */
+    max-width: 100%; /*Establece que el ancho maximo del elemento no puede excender el 100% del ancho de su contenedor padre */
+    height: 350px; /*Establece una altura fija  de 350 pixeles para el elemento, sin importar el contenido que tenga dentro*/
+
+}
+
+/* 1. Color hexadecimal */
+.personajes:nth-child(1) {
+    background-color: #f0f8ff;/* color pastel claro en hex*/
+    color: #000; /* texto negro*/
+}
+
+/* colores rgb*/
+.personajes:nth-child(2) {
+    background-color: rgb(220, 220, 255); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255*/
+}
+
+.personajes:nth-child(3) {
+    background-color: rgb(255, 200, 200); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
+}
+
+.personajes:nth-child(4) {
+    background-color: rgb(200, 255, 200); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
+    
+}
+
+.personajes:nth-child(5) {
+    background-color: rgb(255, 255, 200); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
+}
+.personajes:nth-child(31){
+    background-color: rgb(150, 250, 110); /*Define un color de fondo usando el modelo rgb (red, green, blue) donde cada valor va de 0 a 255 */
+
+}
+/*  Gradiente lineal */
+.personajes:nth-child(6) {
+    background: linear-gradient(to right, #27df0f, #c8ff00); 
+}
+/* Gradiente radial */
+.personajes:nth-child(7) {
+    background: radial-gradient(circle, #ffeb3b, #ff9800);
+}
+
+/*Estilos de texto avanzados */
+.personajes:nth-child(8) {
+    background-color: #fff; /* */
+    text-transform: uppercase; /* convierte texto a mayusculas*/
+    letter-spacing: 1px; /*espacio entre letras */
+    text-shadow: 1px 1px 1px #333; /* sombra de texto*/
+}
+
+/*Fuente en cursiva y negrita */
+.personajes:nth-child(9) {
+    font-size: 1.0rem; /*Tamaño de la fuente establecido en 1 rem  (unidades relativas al tamaño de fuente base del documento)*/
+    font-style: italic; /*Estilo de fuente en cursiva*/
+    font-weight: bold; /*Grosor de la fuente en negrita*/
+}
+
+/*  Uso de rem */
+.personajes:nth-child(10) p {
+    font-size: 1rem; /* rem: relativo al tamaño base del html */
+    
+    
+}
+
+/* Uso de em */
+.personajes:nth-child(11) p {
+    font-size: 1em; /* em: relativo al contenedor */
+    
+    
+    
+    
+}
+/* Comparación de unidades */
+.personajes:nth-child(12) { 
+    font-size: 16px; /* px - unidad absoluta */
+}
+.personajes:nth-child(12) .comparacion {
+    font-size: 16px; /* px - unidad absoluta */
+    margin: 16px; /* px */
+}
+.personajes:nth-child(12) .comparacion-em {
+    font-size: 1em; /* em - relativa al contenedor padre */
+    margin: 1em; /* em */
+}
+.personajes:nth-child(12) .comparacion-rem {
+    font-size: 1rem; /* rem - relativa al font-size del HTML */
+    margin: 1rem; /* rem */
+}
+
+/*Variación de tamaño y peso de fuente */
+.personajes:nth-child(34) {
+    font-size: 1.0rem;  /*Establece el tamaño de la fuente a 1 rem  relativo al tamaño base del documento*/
+    font-style: italic;  /* Aplica estilo de letra en cursiva*/
+    font-weight:bold;  /*Aplica un peso de fuente en negrita*/
+}
+.personajes:nth-child(30){
+    max-width: 230px;  /*Define un ancho maximo de 230 pixeles para evitar que el elemento se expanda  mas alla de ese valor*/
+    height: auto;  /*La altura se ajusta automaticamente al contenido util para mantener proporciones como en imagenes*/
+}
+/* 
+@media (max-width: 900px){
+    .galeria{
+        width: 300%;
+        margin:2% 2%;
+    }
+}
+
+@media (max-width: 600px){
+    .galeria{
+        width: 50%;
+        align-content: center;
+    }
+}
+
+@media (max-width: 1024px){
+    .galeria{
+        width: 50%;
+        margin: 2% 2%;
+    }
+} */
+
+/* @media (min-width: 1200px) {
+    .galeria{
+        margin: 2% 2%;
+    }
+} */
+
+/* Ahora ajustamos el tamaño de fuente para tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .galeria {
+        margin: 2% 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria{
+        margin: 2% 2%;
+    }
+}
+
+@media (max-width:1600px) {
+    .galeria {
+        margin: 1px 1px;
+    }
+}
